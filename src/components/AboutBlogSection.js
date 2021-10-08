@@ -54,17 +54,16 @@ const AboutBlogSection = () => {
       getAllRecipes();
   }, [])
 
-  
     return (
         <section className="about-blog-section" name="about-blog">
           <div className="text-part-box container">
-            <h2>Dlaczego Zielonojemy?</h2>
+            <h2>Cupcake ipsum dolor?</h2>
             <div className="under-line"></div>
-            <h3>Mam dwie edukacyjne misje w życiu. Pierwszą jest zachęcanie do świadomych wyborów żywieniowych, abyśmy jako społeczeństwo mogli cieszyć się zdrowiem jak najdłużej. Drugą natomiast uświadamianie, że to, co jemy ma realny wpływ na naszą planetę. Jedząc bardziej roślinnie, możemy rozświetlić jej przyszłość!</h3>
+            <h3>Macaroon tart macaroon I love wafer biscuit dragée bear claw. I love jelly jelly-o cotton candy pastry cake. Marzipan bonbon I love ice cream jujubes. Toffee tootsie roll candy ice cream lemon drops liquorice.</h3>
           </div>
           <div className="new-posts-box">
             <div className="new-article-title-box">
-              <div className="title">NAJNOWSZY ARTYKUŁ</div>
+              <div className="title">LATEST ARTICLE</div>
             </div>
             <div className="articles-recipes container">
               <div className="short-line-left"></div>
@@ -72,16 +71,16 @@ const AboutBlogSection = () => {
                 <div className="post-image">
                   { !latestArticle ? <div className="post"></div> : <div className={"new__article post " + latestArticle[0].featureImagePosition } style={{ background: `url(${latestArticle[0].featureImage})`, backgroundSize: "cover", backgroundPosition: "center" }}></div> }
                   <div className="post-data">
-                    { !latestArticle ? <h3>Tytuł artykułu</h3> : <h3>{ latestArticle[0].title }</h3>}
+                    { !latestArticle ? <h3>Article title</h3> : <h3>{ latestArticle[0].title }</h3>}
                       <div className="content">
-                      { !latestArticle ? <p>Zawartość artykułu</p> :  parse(latestArticle[0].content.slice(0, 200)) }
+                      { !latestArticle ? <p>Article content</p> :  parse(latestArticle[0].content.slice(0, 200)) }
                       </div>
                     { !latestArticle ?
                       <a to="#">
-                        <span>Czytaj więcej...</span>
+                        <span>Read more...</span>
                       </a> :
                       <Link to={'/articles/' + 'art/' + latestArticle[0].id} >
-                        <span>Czytaj więcej...</span>
+                        <span>Read more...</span>
                       </Link> 
                     }
                   </div>
@@ -91,16 +90,16 @@ const AboutBlogSection = () => {
                 <div className="post-image">
                   { !latestRecipe ? <div className="post"></div> : <div className={"new__recipe post " + latestRecipe[0].featureImagePosition } style={{ background: `url(${latestRecipe[0].featureImage})`, backgroundSize: "cover", backgroundPosition: "center" }}></div>}
                   <div className="post-data">
-                    { !latestRecipe ? <h3>Tytuł przepisu</h3> : <h3>{ latestRecipe[0].title }</h3>}
+                    { !latestRecipe ? <h3>Recipe title</h3> : <h3>{ latestRecipe[0].title }</h3>}
                       <div className="content">
-                      { !latestRecipe ? <p>Zawartość przepisu</p> : parse(latestRecipe[0].content.slice(0, 200)) }
+                      { !latestRecipe ? <p>Recipe content</p> : parse(latestRecipe[0].content.slice(0, 200)) }
                       </div>
                     { !latestArticle ?
                       <a to="#">
-                        <span>Czytaj więcej...</span>
+                        <span>Read more...</span>
                       </a> :
                       <Link to={'/recipes/' + 'rec/' + latestRecipe[0].id} >
-                        <span>Czytaj więcej...</span>
+                        <span>Read more...</span>
                       </Link>
                     }
                   </div>
@@ -108,7 +107,7 @@ const AboutBlogSection = () => {
               <div className="short-line-right"></div>
             </div>
             <div className="new-recipe-title-box">
-              <div className="title">NAJNOWSZY PRZEPIS</div>
+              <div className="title">LATEST RECIPE</div>
             </div>
           </div>
         </section>

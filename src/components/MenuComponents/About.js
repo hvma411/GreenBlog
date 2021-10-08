@@ -1,12 +1,5 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
 
 import CertificateCarousel from "./CertificateCarousel";
 
@@ -16,23 +9,14 @@ const About = () => {
             <div className="container about__page">
                 <div className="about__main__wrapper">
                     <div className="photo"></div>
-                        <h2>Cześć, mam na imię Karolina</h2>
-                        <h4>Jestem dietetykiem klinicznym, miłośniczką dobrej kawy i fanką diety roślinnej.</h4>
-                        <p>Dyplom uzyskałam na Wydziale Lekarskim Collegium Medicum Uniwersytetu Jagiellońskiego w Krakowie. Dietetyką zaczęłam interesować się już w liceum, czyli w tym roku minie 6 lat, odkąd przeczytałam pierwsze podręczniki z nią związane. Chciałabym Ci pokazać, że <strong>zbilansowana dieta</strong> i <strong>aktywność fizyczna</strong> to droga do zdrowia i dobrego samopoczucia. Co ważne - nie potrzebujesz do tego garści suplementów, diety cud czy detoksów.
-                            Jaką dietetykę popularyzuję? Opartą na faktach <strong>naukowych</strong> w przystępnej formie, abyś bez wykształcenia okołomedycznego czuł/a ten klimat.
-                        </p>
-                        <p>Poza ukończonymi studiami, uczestniczyłam w wielu <strong>konferencjach</strong>, <strong>warsztatach</strong> i <strong>szkoleniach</strong> (na certyfikaty możesz zerknąć poniżej). Jestem współautorką publikacji naukowej „Czy zmiany w mikrobiocie jelitowej mogą wpływać na występowanie nadwrażliwości pokarmowej” przedstawionej na międzynarodowej  konferencji. Moja praca licencjacka została opublikowana w czasopiśmie Medicina Sportiva, co również uważam za niemały sukces. 
-                            W grudniu 2020 r. ukończyłam szkolnie <strong>SOIT</strong> przygotowujące mnie do pracy z pacjentami z insulinoopornością. Od tego momentu możesz znaleźć mnie na stronie „Fundacja Insulinooporność – zdrowa dieta i zdrowe życie” na liście <strong>polecanych przez fundację specjalistów</strong>.
-                        </p>
-                        <p>Z luźniejszych informacji „o mnie” mogę Ci powiedzieć, że postrzępione jeansy, trampki i T-shirt to zestaw, w którym najczęściej mnie zobaczysz. Moje zdolności makeupowe zaczynają się i kończą na malowaniu rzęs, a rano zamiast się uczesać wolę zjeść śniadanie. Uwielbiam czarną kawę przelewową, najlepiej wypijaną w towarzystwie przyjaciół w klimatycznej kawiarni, do których mam totalną słabość.
-                            Z racji, że sport to zdrowie, staram się aby regularnie u mnie gościł. Rower, bieganie i pływanie to moja ulubiona trójka, z kolei z aktywności zimowych jedyną akceptowaną jest morsowanie.
-                        </p>
-                        <p>Jak już zdążyłeś/aś przeczytać na początku, jestem zwolenniczką <strong>diety roślinnej</strong>. Wynika to z mojego niepokoju w kwestii postępujących <strong>zmian klimatu</strong>, które możemy spowolnić stawiając na świadome wybory żywieniowe.
-                            Spędzając czas na tej stronie uważaj na siebie, bo pewnie nie jeden raz padniesz ofiarą mojej <strong>fleksitariańskiej</strong> propagandy.
-                        </p>
-                        <p>Mam nadzieję, że zostaniesz ze mną na dłużej. Z miłą chęcią podzielę się z Tobą moją wiedzą i przepisami, natomiast jeśli potrzebujesz indywidualnego wsparcia, zapraszam Cię do <strong>współpracy</strong> (szczegóły znajdziesz w zakładce „oferta”).</p>
+                        <h2>Hello, my name is San Jin Lai-Kang</h2>
+                        <h4>Croissant carrot cake soufflé wafer liquorice tootsie roll pastry sweet.</h4>
+                        <p>Cupcake ipsum dolor sit amet. Dessert candy canes I love tiramisu I love jelly-o powder. Carrot cake carrot cake toffee liquorice cake cake chocolate bar. Chocolate bar macaroon sesame snaps cake danish gingerbread jelly-o I love. Sesame snaps I love sweet roll pie cake carrot cake lemon drops jelly oat cake. Macaroon chocolate chocolate cake bear claw marshmallow biscuit dessert. Sesame snaps tart jelly beans lollipop gummies. Pudding biscuit gummi bears cotton candy liquorice biscuit lollipop chocolate cake. Tiramisu croissant bonbon gingerbread shortbread apple pie liquorice.</p>
+                        <p>Cupcake ipsum dolor sit amet. Powder marzipan sesame snaps jujubes chupa chups dessert. Jelly-o gummies cookie cake cake shortbread brownie ice cream dragée. I love I love sesame snaps lemon drops muffin I love tiramisu. Lemon drops chupa chups chupa chups lemon drops gingerbread chupa chups fruitcake cupcake jelly-o. Gingerbread tiramisu toffee croissant I love dragée cotton candy. Powder chocolate bear claw chocolate bar candy.</p>
+                        <p>Caramels toffee sugar plum cookie jujubes. Candy canes cookie halvah gummies chocolate cheesecake tootsie roll. Chupa chups jujubes cake biscuit jelly beans. Sesame snaps macaroon wafer shortbread jujubes topping carrot cake soufflé. Pie cookie caramels jelly beans jujubes I love sugar plum. Carrot cake powder brownie brownie wafer croissant tart wafer candy.</p>
+                        <p>Cupcake ipsum dolor sit amet. Chupa chups gummies lemon drops cookie apple pie toffee chocolate cake topping. Shortbread pastry carrot cake danish liquorice cake. Sweet roll tiramisu marshmallow I love ice cream dragée gummies jelly beans powder. Topping caramels cheesecake ice cream sugar plum caramels carrot cake. Cotton candy caramels cheesecake muffin soufflé fruitcake chocolate cake I love bonbon.</p>
+                        <p>Cupcake dessert oat cake pastry wafer. Pastry cheesecake donut toffee jelly beans cake. Dessert dessert I love gingerbread donut. Cookie muffin sweet chocolate cake carrot cake sweet gummi bears.</p>
                 </div>
-                
             </div>
             <CertificateCarousel />
         </section>

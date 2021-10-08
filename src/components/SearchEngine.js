@@ -1,22 +1,12 @@
-import React, { Component, useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import ReactDOM from "react-dom";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
-import firebase from '../config/firebase';
-import parse from 'html-react-parser';
 import { SearchEngineContext } from '../App';
 
 const SearchEngine = () => {
 
-    const [tagToSearch, setTagToSearch] = useState('')
+    const [tagToSearch, setTagToSearch] = useState('');
 
-
-    const searchContext = useContext(SearchEngineContext)
+    const searchContext = useContext(SearchEngineContext);
 
     const handleFormChange = (e) => {
         e.persist();
@@ -27,7 +17,6 @@ const SearchEngine = () => {
         e.preventDefault();
         searchContext.setHashTag(tagToSearch);
         searchContext.setIsModalVisible(true)
-        // getResultDocuments()
     }
 
     return (
@@ -35,9 +24,9 @@ const SearchEngine = () => {
             <form className="search-form">
                 <div className="input-box">
                     <label htmlFor="search-engine" className="hash">#</label>
-                    <input id="search-engine" onChange={ handleFormChange } value={ tagToSearch } type="text" placeholder="Wpisz szukaną frazę..." />
+                    <input id="search-engine" onChange={ handleFormChange } value={ tagToSearch } type="text" placeholder="Enter some tag..." />
                 </div>
-                <button onClick={ handleSearchClick } className="search-btn">Szukaj</button>
+                <button onClick={ handleSearchClick } className="search-btn">Search</button>
             </form>
         </div>
     )

@@ -76,7 +76,7 @@ const Recipes = () => {
                 <div className="container articles__page">
                     <div className="articles-list">
                         <div className="title-pagination-box">
-                            <h3 className="section__title">PRZEPISY</h3>
+                            <h3 className="section__title">RECIPES</h3>
                             <Pagination postsPerPage={ postsPerPage } totalPosts={ setPublishedRecipes(recipes).length } paginate={ paginate } />
                         </div>
                         <span className="underline"></span>
@@ -90,11 +90,10 @@ const Recipes = () => {
                         </div>
                     </div>
                     <div className="sidebar">
-                        <h3 className="section__title">PROMOWANY WPIS</h3>
+                        <h3 className="section__title">PROMOTED POST</h3>
                         <span className="underline"></span>
                         <Promoted />
-                        <InstagramFeed />
-                        <h4 className="sidebar-wrapper-title">PRZESZUKAJ BLOGA</h4>
+                        <h4 className="sidebar-wrapper-title">SEARCH THE BLOG</h4>
                         <SearchEngine />
                     </div>
                 </div>

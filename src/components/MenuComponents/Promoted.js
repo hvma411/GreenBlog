@@ -1,12 +1,6 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import firebase from '../../config/firebase';
 import parse from 'html-react-parser';
 
@@ -15,8 +9,6 @@ const Promoted = () => {
     const db = firebase.firestore();
 
     const [allData, setAllData] = useState([]);
-    const [parentPath, setParentPath] = useState("");
-    const [childrenPath, setChildrenPath] = useState("");
     const [loadingData, setLoadingData] = useState(true);
 
     const [articles, setArticles] = useState([])
@@ -84,28 +76,6 @@ const Promoted = () => {
         setAllPosts();
     }, [loadingArticles, loadingRecipes])
 
-
-
-    // const pathSeter = () => {
-    //     if (!loadingData) {
-    //         console.log(allData[randomPostIndex])
-    //         if (allData[randomPostIndex].type === "article") {
-    //             setParentPath("articles");
-    //             setChildrenPath("art");
-    //         } else {
-    //             setParentPath("recipes");
-    //             setChildrenPath("rec");
-    //         }
-    //     }
-    // }
-
-
-
-    // useEffect(() => {
-    //     pathSeter();
-    // }, [allData]);
-
-
     return (
         <div className="promoted">
             { loadingData ? <div className="loading-content"></div> : 
@@ -125,11 +95,11 @@ const Promoted = () => {
                         </ul>
                         { allData[randomPostIndex].type != "article" ? 
                         <Link to={ '/recipes/' + 'rec/' + allData[randomPostIndex].id } >
-                            <span className="read-more-btn">Czytaj więcej...</span>
+                            <span className="read-more-btn">Read more...</span>
                         </Link> 
                         :
                         <Link to={ '/articles/' + 'art/' + allData[randomPostIndex].id } >
-                            <span className="read-more-btn">Czytaj więcej...</span>
+                            <span className="read-more-btn">Read more...</span>
                         </Link>
                         }
                     </div>

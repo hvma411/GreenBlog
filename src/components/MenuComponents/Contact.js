@@ -33,7 +33,7 @@ const Contact = () => {
             document.querySelector(".wrongEmail").style.display = "block";
         };
 
-        if (contactForm.guestMessage.length < 30) {
+        if (contactForm.guestMessage.length < 10) {
             errors.push('wrongMessage');
             document.querySelector(".wrongMessage").style.display = "block";
         };
@@ -73,10 +73,7 @@ const Contact = () => {
             }, error => {
                 console.log(error.text)
             })
-
-
         };
-        
     };
     
     const handleFormChange = (e) => {
@@ -96,65 +93,61 @@ const Contact = () => {
         if (contactForm.fullName.length > 2) {
             document.querySelector(".wrongName").style.display = "none";
         };
-
         if (validateEmail(contactForm.emailAddress) === true) {
             document.querySelector(".wrongEmail").style.display = "none";
         };
-
-        if (contactForm.guestMessage.length > 29) {
+        if (contactForm.guestMessage.length > 9) {
             document.querySelector(".wrongMessage").style.display = "none";
         }
-        
         if (contactForm.fullName.length > 0 || contactForm.emailAddress.length > 0 || contactForm.guestMessage.length > 0) {
             document.querySelector(".emptyForm").style.display = "none";
         }
     }, [contactForm])
 
-    
     return (
         <section className="contact">
             <div className="container contact__page">
-                <h3 className="section__title">SKONTAKTUJ SIĘ ZE MNĄ</h3>
+                <h3 className="section__title">CONTACT WITH ME</h3>
                 <span className="underline"></span>
                 <div className="page-box">
                     <div className="form-box">
-                        <h4>Moje dane kontaktowe:</h4>
+                        <h4>My contact details:</h4>
                         <div className="contact__details">
                             <div className="detail-box">
-                                <h5>TELEFON:</h5>
-                                <p><a href="tel:+48789455613">+48 789 455 613</a></p>
+                                <h5>PHONE:</h5>
+                                <p><a href="tel:0898-63121067">0898-63121067</a></p>
                             </div>
                             <div className="detail-box">
-                                <h5>EMAIL:</h5>
-                                <p><a href="mailto:furmanska.diet@gmail.com">furmanska.diet@gmail.com</a></p>
+                                <h5>E-MAIL:</h5>
+                                <p><a href="mailto:san@greenblog.com">san@greenblog.com</a></p>
                             </div>
                         </div>
-                        <h4>Moje socialmedia:</h4>
+                        <h4>My socialmedia:</h4>
                         <div className="socialmedia">
-                            <a href="https://www.facebook.com/Zielonojemy-Karolina-Furma%C5%84ska-101969841692612" target="blank_">
+                            <a href="https://www.facebook.com/" target="blank_">
                                 <FontAwesomeIcon icon={ faFacebookSquare } />
                             </a>
-                            <a href="https://www.instagram.com/zielonojemy/?hl=pl" target="blank_">
+                            <a href="https://www.instagram.com/" target="blank_">
                                 <FontAwesomeIcon icon={ faInstagramSquare }/>
                             </a>
-                            <a href="https://www.linkedin.com/in/karolina-furma%C5%84ska-75224a205/" target="blank_">
+                            <a href="https://www.linkedin.com/" target="blank_">
                                 <FontAwesomeIcon icon={ faLinkedin }/>
                             </a>
                         </div>
                         <form>
-                            <h4>Napisz do mnie wiadomość:</h4>
-                            <input type="text" name="fullName" value={ contactForm.fullName } onChange={ handleFormChange } placeholder="Twoje imie..." />
-                            <input type="text" name="emailAddress" value={ contactForm.emailAddress } onChange={ handleFormChange } placeholder="Twój adres email..." />
-                            <textarea name='guestMessage' value={ contactForm.guestMessage } onChange={ handleFormChange } placeholder="Twoja wiadomość..." />
+                            <h4>Text me:</h4>
+                            <input type="text" name="fullName" value={ contactForm.fullName } onChange={ handleFormChange } placeholder="Your name..." />
+                            <input type="text" name="emailAddress" value={ contactForm.emailAddress } onChange={ handleFormChange } placeholder="Your email address..." />
+                            <textarea name='guestMessage' value={ contactForm.guestMessage } onChange={ handleFormChange } placeholder="Your message..." />
                             <div className="button-box">
                                 <div className="errors-box">
-                                    <span className="wrongName">Podaj proszę swoje imię</span>
-                                    <span className="wrongEmail">Popraw adres email</span>
-                                    <span className="wrongMessage">Twoja wiadomość jest za krótka (min. 30 znaków)</span>
-                                    <span className="emptyForm">Uzupełnij poprawnie wszystkie pola (wiadomość to min. 30 znaków)</span>
-                                    <span className="messageInfo">Wiadomość została wysłana</span>
+                                    <span className="wrongName">I'd like to know your real name</span>
+                                    <span className="wrongEmail">Please correct your email address</span>
+                                    <span className="wrongMessage">Your message is to short (minimum 10 characters)</span>
+                                    <span className="emptyForm">Please complete all fields correctly (message should be 10 characters long at least)</span>
+                                    <span className="messageInfo">Message has been sent</span>
                                 </div>
-                                <button onClick={ handleButtonClick }>Wyślij</button>
+                                <button onClick={ handleButtonClick }>Send</button>
                             </div>
 
                         </form>

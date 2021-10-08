@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "greenblog",
     "public": "public",
     "ignore": [
       "firebase.json",
