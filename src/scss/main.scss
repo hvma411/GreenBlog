@@ -1,0 +1,78 @@
+@import './utils/vars/colors';
+@import './reset.scss';
+
+@import './utils/vars//keyframes';
+@import './utils/mobileSize/hamburger-menu';
+
+@import './utils/mobileSize/header-section-mobile';
+@import './utils/fullSize/header-section';
+
+@import './utils/mobileSize/welcome-section-mobile';
+@import './utils/fullSize/welcome-section';
+
+@import './utils/mobileSize/about-blog-section-mobile';
+@import './utils/fullSize/about-blog-section';
+
+@import './utils/mobileSize/about-me-section-mobile'; 
+@import './utils/fullSize/about-me-section';
+
+@import './utils/mobileSize/services-section-mobile';
+@import './utils/fullSize/services-section';
+
+@import './utils/mobileSize/opinions-section.mobile';
+@import './utils//fullSize/opinions-section';
+
+@import './utils/mobileSize/footer-section-mobile';
+@import './utils/fullSize/footer-section';
+
+@import './utils/mobileSize/articles-mobile';
+@import './utils/fullSize/articles';
+
+@import './utils/mobileSize/recipes-mobile';
+@import './utils/fullSize/recipes';
+
+@import './utils/mobileSize/about-mobile';
+@import './utils/fullSize/about';
+
+@import './utils/mobileSize/services-mobile';
+@import './utils/fullSize/services';
+
+@import './utils/mobileSize/contact-mobile';
+@import './utils/fullSize/contact';
+
+@import './utils/mobileSize/ComponentsStyles/promoted-component';
+@import './utils/mobileSize/ComponentsStyles/search-engine-component';
+
+@import './utils/mobileSize/article-display-mobile';
+@import './utils/fullSize/articles-display';
+
+@import './utils/fullSize/search-modal';
+
+@import './utils/fullSize/AdminPanelStyles/adminSignIn';
+@import './utils/fullSize/AdminPanelStyles/admin';
+@import './utils/fullSize/AdminPanelStyles/adminDesktop';
+@import './utils/fullSize/AdminPanelStyles/adminArticleDesktop';
+@import './utils/fullSize/AdminPanelStyles/adminScheduleDesktop';
+
+.hidden-website {
+    width: 100%;
+    height: 100vh;
+    background: $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        width: 300px;
+        height: 300px;
+        background-image: url(/src/scss/assets/logo2.png);
+        background-size: cover;
+        margin: 20px;
+    }
+
+    input {
+        padding: 10px 15px;
+        font-size: 1.5rem;
+    }
+}

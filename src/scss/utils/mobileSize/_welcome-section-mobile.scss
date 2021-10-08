@@ -1,0 +1,219 @@
+@media only screen and (min-width: 100px) {
+    .welcome-section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: $main-color;
+        padding-top: 40px;
+        margin-bottom: 30px;
+    
+        .logo-box {
+            width: 100%;
+            height: 150px;
+            background-image: url(/src/scss/assets/IMG_0166.PNG);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 20px 0 20px 0;
+        }
+        .photo-txt-box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+    
+            .photo__box {
+                width: 50%;
+                height: auto;
+                position: relative;
+                display: none;
+    
+                .photo {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 600px;
+                    background: url(/src/scss/assets/IMG_0132.JPG);
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+    
+            }
+    
+            .txt__box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                h1 {
+                    color: $btn-color;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    max-width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                }
+    
+                .short-line {
+                    height: 30px;
+                    border-left: 3px solid $line-color;
+                }
+    
+                h2 {
+                    color: $line-color;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    text-align: center;
+                    max-width: 100%;
+                    padding: 10px 10px 30px 10px;
+                }
+            }
+        }
+        .white-cut {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            background: $btn-txt-color;
+    
+            .reducer {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+    
+                .button-box {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    padding: 30px 30px 0 30px;
+    
+                    .short-line {
+                        position: absolute;
+                        top: -15px;
+                        height: 30px;
+                        border-left: 3px solid $line-color;
+                    }
+    
+                    button {
+                        font-size: 1.5rem;
+                        color: $btn-txt-color;
+                        background: $btn-color;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 10px 40px 10px 40px;
+                        
+                        a {
+                            text-decoration: none;
+                            color: $btn-txt-color;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 725px) and (orientation: landscape) {
+    .welcome-section {
+        .logo-box {
+            height: 120px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    .welcome-section {
+   
+        .logo-box {
+            height: 160px;
+        }
+        .photo-txt-box {
+    
+            .txt__box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                h1 {
+                    color: $btn-color;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    max-width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                }
+    
+                .short-line {
+                    height: 30px;
+                    border-left: 3px solid $line-color;
+                }
+    
+                h2 {
+                    color: $line-color;
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    text-align: center;
+                    max-width: 100%;
+                    padding: 10px 10px 30px 10px;
+                }
+            }
+        }
+        .white-cut {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            background: $btn-txt-color;
+    
+            .reducer {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+    
+                .button-box {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    padding: 30px 30px 0 30px;
+    
+                    .short-line {
+                        position: absolute;
+                        top: -15px;
+                        height: 30px;
+                        border-left: 3px solid $line-color;
+                    }
+    
+                    button {
+                        font-size: 1.5rem;
+                        color: $btn-txt-color;
+                        background: $btn-color;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 10px 40px 10px 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
