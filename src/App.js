@@ -21,70 +21,8 @@ import SearchResultModal from "./components/SearchResultModal";
 
 export const SearchEngineContext = React.createContext();
 
-const HiddenWebsite = ({ isWebisteHidden, setIsWebsiteHidden }) => {
-
-    const [counter, setCounter] = useState(0);
-    const [input, setInput] = useState(false);
-
-    const showWebsite = () => {
-        setCounter(prevState => prevState + 1)
-
-        if (counter === 5) {
-            setInput(true);
-        }
-
-    }
-
-    const onChangeFn = (e) => {
-        
-        if (e.target.value === 'niebieski') {
-            setIsWebsiteHidden(false)
-        }
-    }
-
-    return (
-        <div className="hidden-website">
-            <div className="logo" onClick={ showWebsite }>
-            </div>
-            {input ? <input type="text" placeholder="Your favourite color is..." onChange={ onChangeFn } /> : null }
-        </div>
-    )
-}
-
-const WebsiteComponent = ({ setIsModalVisible }) => {
-    return (
-        <>
-            <HeaderSection />
-                <Switch>
-                    <Route exact path="/">
-                        <Main setIsModalVisible={ setIsModalVisible } />
-                    </Route>
-                    <Route exact path="/articles">
-                        <Articles setIsModalVisible={ setIsModalVisible } />
-                    </Route>
-                    <Route exact path="/recipes">
-                        <Recipes setIsModalVisible={ setIsModalVisible } />
-                    </Route>
-                    <Route path="/services">
-                        <Services/>
-                    </Route>
-                    <Route path="/about">
-                        <About/>
-                    </Route>
-                    <Route path="/contact">
-                        <Contact/>
-                    </Route>
-                    <Route exact path="/articles/:typeOf/:documentID" component={withRouter(DocumentDisplay)} />
-                    <Route exact path="/recipes/:typeOf/:documentID" component={withRouter(DocumentDisplay)} />
-                </Switch>
-            <FooterSection />
-        </>
-    )
-}
 
 const App = () => {
-
-    const [isWebisteHidden, setIsWebsiteHidden] = useState(true);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [hashTag, setHashTag] = useState(null);
 
@@ -92,7 +30,30 @@ const App = () => {
         <Router>
             <ScrollToTop>
                 <SearchEngineContext.Provider value={{ isModalVisible, setIsModalVisible, hashTag, setHashTag }}>
-                    { isWebisteHidden ? <HiddenWebsite isWebisteHidden={ isWebisteHidden } setIsWebsiteHidden={ setIsWebsiteHidden } /> : <WebsiteComponent setIsModalVisible={ setIsModalVisible } />}
+                    <HeaderSection />
+                        <Switch>
+                            <Route exact path="/">
+                                <Main setIsModalVisible={ setIsModalVisible } />
+                            </Route>
+                            <Route exact path="/articles">
+                                <Articles setIsModalVisible={ setIsModalVisible } />
+                            </Route>
+                            <Route exact path="/recipes">
+                                <Recipes setIsModalVisible={ setIsModalVisible } />
+                            </Route>
+                            <Route path="/services">
+                                <Services/>
+                            </Route>
+                            <Route path="/about">
+                                <About/>
+                            </Route>
+                            <Route path="/contact">
+                                <Contact/>
+                            </Route>
+                            <Route exact path="/articles/:typeOf/:documentID" component={withRouter(DocumentDisplay)} />
+                            <Route exact path="/recipes/:typeOf/:documentID" component={withRouter(DocumentDisplay)} />
+                        </Switch>
+                    <FooterSection />
                     { isModalVisible ? <SearchResultModal setIsModalVisible={ setIsModalVisible } /> : null }
                 </SearchEngineContext.Provider>
             </ScrollToTop>
