@@ -11,7 +11,7 @@ import FooterSection from "../FooterSection";
 import HeaderSection from "../HeaderSection";
 
 import Feed from 'react-instagram-authless-feed';
-import Pagination from '../AdminPanel/Pagination';
+import Pagination from '../Pagination';
 import firebase from '../../config/firebase';
 import parse from 'html-react-parser';
 import Promoted from "./Promoted";

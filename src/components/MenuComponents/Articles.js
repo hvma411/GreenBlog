@@ -7,8 +7,7 @@ import {
   Switch,
   NavLink,
 } from 'react-router-dom';
-import { InstagramFeed } from './Recipes';
-import Pagination from '../AdminPanel/Pagination';
+import Pagination from '../Pagination';
 import firebase from '../../config/firebase';
 import Promoted from "./Promoted";
 import parse from 'html-react-parser';
