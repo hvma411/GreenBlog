@@ -1,55 +1,50 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import {
-  HashRouter,
-  Route,
   Link,
-  Switch,
-  NavLink,
 } from 'react-router-dom';
 
 const ServicesSection = () => {
     return (
         <section className="services-section">
             <div className="container section-wrapper">
-                <h2>Poznaj moje opcje współpracy</h2>
+                <h2>Cupcake ipsum dolor sit amet cupcake</h2>
                 <div className="underline"></div>
                 <div className="services-box">
                     <div className="service">
-                        <h4>Miesięczna / 180zł</h4>
+                        <h4>Tiramisu</h4>
                         <div className="service__img1"></div>
-                        <h5>Pakiet na start - chcesz rozpocząć swoją przygodę ze zdrowym odżywianiem</h5>
+                        <h5>Bonbon dessert marshmallow jelly beans liquorice dragée fruitcake.</h5>
                         <ul>
-                            <li><strong>Wstępna</strong> konsultacja wideo lub telefoniczna</li>
-                            <li>Indywidualny jadłospis 7-dniowy</li>
-                            <li><strong>Pierwszeństwo</strong> przedłużenia współpracy na kolejny miesiąc</li>
+                            <li><strong>Chupa</strong> chups I love tootsie roll</li>
+                            <li>Jelly beans danish macaroon</li>
+                            <li><strong>Lemon</strong> jujubes gummies bear claw donut</li>
                         </ul>
                     </div>
                     <div className="service promoted">
-                        <h4>Dwumiesięczna / 310zł</h4>
+                        <h4>Apple pie</h4>
                         <div className="service__img1"></div>
-                        <h5>Czujesz, że miesiąc to za krótko, aby wypracować nowe nawyki żywieniowe</h5>
+                        <h5>Muffin caramels liquorice oat cake oat.</h5>
                         <ul>
-                            <li>Wstępna i <strong>kontrolna</strong> konsultacja wideo lub telefoniczna</li>
-                            <li><strong>Dwa</strong> indywidualne jadłospisy 7-dniowe</li>
-                            <li>Stały kontakt mailowy</li>
-                            <li><strong>Zaoszczędzasz 50 zł</strong> na dodatkową porcję warzyw</li>
+                            <li><strong>Chupa</strong> chups I love tootsie roll</li>
+                            <li>Jelly beans danish macaroon</li>
+                            <li><strong>Lemon</strong> jujubes gummies bear claw donut</li>
+                            <li>Jelly beans danish macaroon</li>
                         </ul>
                     </div>
                     <div className="service">
-                        <h4>Trzymiesięczna / 410zł</h4>
+                        <h4>Lollipop</h4>
                         <div className="service__img1"></div>
-                        <h5>Potrzebujesz długoterminowej opieki i wsparcia</h5>
+                        <h5>Bonbon dessert marshmallow jelly beans.</h5>
                         <ul>
-                            <li>Wstępna i <strong>dwie</strong> kontrolne konsultacje wideo lub telefoniczne</li>
-                            <li><strong>Nowy</strong> jadłospis 7-dniowy na każdy kolejny miesiąc współpracy</li>
-                            <li>Długofalowe wsparcie dietetyka zwiększa Twoją szansę na sukces</li>
-                        
+                            <li><strong>Chupa</strong> chups I love tootsie roll</li>
+                            <li>Jelly beans danish macaroon</li>
+                            <li><strong>Lemon</strong> jujubes gummies bear claw donut</li>
                         </ul>
                     </div>
                 </div>
                 <Link to="/services">
-                    <button>Czytaj więcej</button>
+                    <button>Read more</button>
                 </Link>
             </div>
         </section>

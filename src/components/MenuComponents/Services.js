@@ -1,76 +1,62 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import ReactHtmlParser from 'react-html-parser';
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
 
 const Services = () => {
 
     const servicesData = {
         oneMonth: {
-            title: "Miesięczne",
-            subtitle: "Pakiet na start - chcesz rozpocząć swoją przygodę ze zdrowym odżywianiem",
-            price: 180,
+            title: "Tiramisu",
+            subtitle: "Cupcake ipsum dolor sit amet croissant muffin.",
+            price: 1,
             detailsList: [
-                "Indywidualny jadłospis 7-dniowy w pliku PDF do kilkukrotnego powtórzenia (ściąga na lodówkę, dokładne przepisy do każdego posiłku, ilość produktów w gramaturze oraz w miarach domowych, lista zakupów na cały tydzień)",
-                "Wstępna konsultacja wideo lub telefoniczna",
-                "Dostęp do aplikacji mobilnej na okres współpracy, w której znajdzie się Twoja dieta",
-                "Lista zamienników, aby jadłospis był jeszcze prostszy do zastosowania",
-                "Stały kontakt mailowy",
-                "2 zmiany w jadłospisie",
-                "Propozycja ewentualnej suplementacji",
-                "Pierwszeństwo przedłużenia współpracy na kolejny miesiąc"
+                "Marzipan wafer I love marshmallow cake chocolate bar I love.",
+                "Chupa chups I love pastry sweet roll gingerbread jujubes dessert biscuit.",
+                "Candy canes chocolate sweet roll croissant halvah tart.",
+                "Jelly-o donut shortbread toffee I love.",
+                "Halvah icing apple pie icing I love oat cake ice cream.",
+                "I love chocolate cake chocolate bar jelly-o powder gummies.",
+                "Jujubes I love cheesecake pastry wafer cake tootsie roll.",
             ]
         },
         twoMonths: {
-            title: "Dwumiesięczne",
-            subtitle: "Czujesz, że miesiąc to za krótko, aby wypracować nowe nawyki żywieniowe",
-            price: 310,
+            title: "Apple pie",
+            subtitle: "Cotton candy pastry candy halvah jujubes biscuit tiramisu soufflé.",
+            price: 5,
             detailsList: [
-                "Zaoszczędzasz 50 zł na dodatkową porcję warzyw",
-                "Dwa indywidualne jadłospisy 7-dniowe w pliku PDF do kilkukrotnego powtórzenia (ściąga na lodówkę, dokładne przepisy do każdego posiłku, ilość produktów w gramaturze oraz w miarach domowych, lista zakupów na cały tydzień)",
-                "Wstępna oraz kontrolna konsultacja wideo lub telefoniczna",
-                "Dostęp do aplikacji mobilnej na okres współpracy, w której znajdzie się Twoja dieta",
-                "Lista zamienników produktów, aby jadłospis był jeszcze prostszy do zastosowania",
-                "Stały kontakt mailowy",
-                "2 zmiany w jadłospisie",
-                "Propozycja ewentualnej suplementacji",
-                "Pierwszeństwo przedłużenia współpracy na kolejny okres"
+                "Marzipan wafer I love marshmallow cake chocolate bar I love.",
+                "Chupa chups I love pastry sweet roll gingerbread jujubes dessert biscuit.",
+                "Candy canes chocolate sweet roll croissant halvah tart.",
+                "Jelly-o donut shortbread toffee I love.",
+                "Halvah icing apple pie icing I love oat cake ice cream.",
+                "I love chocolate cake chocolate bar jelly-o powder gummies.",
+                "Jujubes I love cheesecake pastry wafer cake tootsie roll.",
             ]
         },
         threeMonths: {
-            title: "Trzymiesięczne",
-            subtitle: "Odpowiedni wariant dla Ciebie, jeśli potrzebujesz więcej czasu i pracy, aby zmienić swoje odżywianie",
-            price: 410,
+            title: "Lollipop",
+            subtitle: "Halvah icing apple pie icing I love oat cake ice cream.",
+            price: 10,
             detailsList: [
-                "Trzy indywidualne jadłospisy 7-dniowe w pliku pdf do kilkukrotnego powtórzenia (ściąga na lodówkę, dokładne przepisy do każdego posiłku, ilość produktów w gramaturze oraz w miarach domowych, lista zakupów na cały tydzień)",
-                "Dostęp do aplikacji mobilnej na okres współpracy, w której znajdzie się Twoja dieta",
-                "Lista zamienników, aby jadłospis był jeszcze prostszy do zastosowania",
-                "Wstępna oraz dwie kontrolne konsultacje wideo lub telefoniczne",
-                "Stały kontakt mailowy",
-                "2 zmiany w każdym jadłospisie",
-                "Propozycja ewentualnej suplementacji",
-                "Pierwszeństwo przedłużenia współpracy na kolejny okres"
+                "Marzipan wafer I love marshmallow cake chocolate bar I love.",
+                "Chupa chups I love pastry sweet roll gingerbread jujubes dessert biscuit.",
+                "Candy canes chocolate sweet roll croissant halvah tart.",
+                "Jelly-o donut shortbread toffee I love.",
+                "Halvah icing apple pie icing I love oat cake ice cream.",
+                "I love chocolate cake chocolate bar jelly-o powder gummies.",
+                "Jujubes I love cheesecake pastry wafer cake tootsie roll.",
             ]
         },
         bussinessOffer: {
             title: null,
-            subtitle: "Tworzenie etykiet produktowych",
+            subtitle: " Jujubes I love cheesecake pastry wafer.",
             price: null,
-            moreInfo: "Prowadzisz kawiarnię/restaurację i potrzebujesz stworzyć etykiety na swoje produkty sprzedawane na wynos? Śmiało możesz oddać to w moje ręce. Tworzę opisy zgodne z Rozporządzeniem Parlamentu Europejskiego, dlatego możesz mieć pewność, że będą wykonane poprawnie i nic na nich nie zabraknie.",
-            listTitle: "Jakie informacje między innymi muszą znaleźć się na etykiecie?",
+            moreInfo: "Gummies croissant macaroon candy canes I love. Gingerbread soufflé sweet jujubes soufflé.",
+            listTitle: "Cheesecake cookie cake toffee tootsie roll candy canes?",
             detailsList: [
-                "Nazwa produktu",
-                "Jego skład",
-                "Tabela wartości odżywczych w przeliczeniu na 100g produktu oraz opcjonalnie na porcję",
-                "Wyraźnie zaznaczone alergeny",
-                "Producent",
-                "Data przydatności i do spożycia",
+                "Marzipan wafer I love marshmallow cake chocolate bar I love.",
+                "Chupa chups I love pastry sweet roll gingerbread jujubes dessert biscuit.",
+                "Candy canes chocolate sweet roll croissant halvah tart.",
+                "Jelly-o donut shortbread toffee I love.",
             ]
         }
     }
@@ -78,12 +64,12 @@ const Services = () => {
     return (
         <section className="services">
             <div className="container services__page">
-                <h3 className="section__title">WSPARCIE INDYWIDUALNE</h3>
+                <h3 className="section__title">OAT CAKE JELLY ICE CREAM</h3>
                 <span className="underline"></span>
                 <SingleService data={servicesData.oneMonth} />
                 <SingleService data={servicesData.twoMonths} />
                 <SingleService data={servicesData.threeMonths} />
-                <h3 className="section__title">OFERTA DLA FIRM</h3>
+                <h3 className="section__title">JELLY-O BISCUIT CAKE</h3>
                 <span className="underline"></span>
                 <SingleService data={servicesData.bussinessOffer} />
             </div>
@@ -109,11 +95,9 @@ const SingleService = ( {data} ) => {
             </div>
             { data.title ? <span className="service__title">{ data.title }</span> : null}
             { data.subtitle ? <span className="service__subtitle">{ data.subtitle }</span> : null}
-            { data.price ? <span className="service__price">{ data.price }zł</span> : <span className="service__price"> Cena ustalana indywidualnie</span>}
+            { data.price ? <span className="service__price">{ data.price } ETH</span> : <span className="service__price">Marshmallow powder wafer</span>}
         </div>
-    )
-
-    
+    )    
 }
 
 export default Services;

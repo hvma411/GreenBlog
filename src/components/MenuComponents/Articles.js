@@ -46,8 +46,6 @@ const Articles = () => {
         getAllArticles()
     }, [])
 
-
-
     const setPublishedArticles = (articles) => {
         let publishedArticles = [];
 
@@ -74,7 +72,7 @@ const Articles = () => {
                 <div className="container articles__page">
                     <div className="articles-list">
                         <div className="title-pagination-box">
-                        <h3 className="section__title">ARTYKUŁY</h3>
+                        <h3 className="section__title">ARTICLES</h3>
                             <Pagination postsPerPage={ postsPerPage } totalPosts={ setPublishedArticles(articles).length } paginate={ paginate } />
                         </div>
                         <span className="underline"></span>
@@ -88,11 +86,10 @@ const Articles = () => {
                         </div>
                     </div>
                     <div className="sidebar">
-                        <h3 className="section__title">PROMOWANY WPIS</h3>
+                        <h3 className="section__title">PROMOTED POST</h3>
                         <span className="underline"></span>
                         <Promoted />
-                        <InstagramFeed />
-                        <h4 className="sidebar-wrapper-title">PRZESZUKAJ BLOGA</h4>
+                        <h4 className="sidebar-wrapper-title">SEARCH THE BLOG</h4>
                         <SearchEngine />
                     </div>
                 </div>

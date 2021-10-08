@@ -1,15 +1,8 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookSquare, faInstagramSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const FooterSection = () => {
     return (
@@ -17,22 +10,22 @@ const FooterSection = () => {
             <div className="container footer-wrapper">
                 <div className="contact-info-box footer-part">
                     <ul>
-                        <li>Karolina Furmańska</li>
-                        <li>Tel.: <a href="tel:+48789455613">+48 789 455 613</a> </li>
-                        <li>Mail.: <a href="mailto:furmanska.diet@gmail.com">furmanska.diet@gmail.com</a> </li>
+                        <li>San Jin Lai-Kang</li>
+                        <li>Phone: <a href="tel:0898-63121067">0898-63121067</a></li>
+                        <li>E-Mail: <a href="mailto:san@greenblog.com">san@greenblog.com</a></li>
                     </ul>
                 </div>
                 <div className="vertical-line"></div>
                 <div className="logo-box footer-part">
                     <div className="logo"></div>
                     <div className="socialmedia">
-                        <a href="https://www.facebook.com/Zielonojemy-Karolina-Furma%C5%84ska-101969841692612" target="blank_">
+                        <a href="https://www.facebook.com/" target="blank_">
                             <FontAwesomeIcon icon={ faFacebookSquare } />
                         </a>
-                        <a href="https://www.instagram.com/zielonojemy/?hl=pl" target="blank_">
+                        <a href="https://www.instagram.com/" target="blank_">
                             <FontAwesomeIcon icon={ faInstagramSquare }/>
                         </a>
-                        <a href="https://www.linkedin.com/in/karolina-furma%C5%84ska-75224a205/" target="blank_">
+                        <a href="https://www.linkedin.com/" target="blank_">
                             <FontAwesomeIcon icon={ faLinkedin }/>
                         </a>
                     </div>
@@ -40,12 +33,12 @@ const FooterSection = () => {
                 <div className="vertical-line"></div>
                 <div className="footer-nav footer-part">
                     <ul>
-                    <li><Link to="/">Strona główna</Link></li>
-                    <li><Link to="/articles">Artykuły</Link></li>
-                    <li><Link to="/recipes">Przepisy</Link></li>
-                    <li><Link to="/services">Oferta</Link></li>
-                    <li><Link to="/about">O mnie</Link></li>
-                    <li><Link to="/contact">Kontakt</Link></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/articles">Articles</Link></li>
+                        <li><Link to="/recipes">Recipes</Link></li>
+                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
             </div>

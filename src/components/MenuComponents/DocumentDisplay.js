@@ -1,14 +1,6 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-  useParams,
-  BrowserRouter as Router,
-} from 'react-router-dom';
+import { useParams, BrowserRouter as Router } from 'react-router-dom';
 import parse from 'html-react-parser';
 import firebase from '../../config/firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,14 +12,10 @@ import {
     EmailIcon,
     FacebookShareButton,
     FacebookIcon,
-    InstapaperShareButton,
-    InstapaperIcon,
     LinkedinShareButton,
     LinkedinIcon,
     TwitterShareButton,
     TwitterIcon,
-    WhatsappShareButton,
-    WhatsappIcon,
     FacebookMessengerShareButton,
     FacebookMessengerIcon,
 } from 'react-share'
@@ -95,7 +83,6 @@ const DocumentDisplay = () => {
                     }
     
                 } else {
-                    // doc.data() will be undefined in this case
                     console.log("No such document!");
                 }
             }).catch(function(error) {
@@ -117,14 +104,13 @@ const DocumentDisplay = () => {
                 <div className="container section-wrapper">
                     <div className="article">
                         <div className="article__img" style={{ background: `url(${document.featureImage})`, backgroundSize: "cover", backgroundPosition: "center" }} ></div>
-                        {/* <img src={ document.featureImage } className="article__img"></img> */}
                         <div className="article__content">
                             <h1>{ document.title }</h1>
                             {parse(document.content)}
                             <span className="underline"></span>
                             <div className="tags-actions-row">
                                 <div className="tags-box">
-                                    <h4>TAGI:</h4>
+                                    <h4>TAGS:</h4>
                                     <ul className="tags-list">
                                         {document.hashTags.map((tag, idx) => (
                                             <li key={ idx } className="tag">{ tag }</li>
@@ -139,9 +125,9 @@ const DocumentDisplay = () => {
                         </div>
                     </div>
                     <div className="sidebar">
-                        <h4 className="sidebar-wrapper-title">PROMOWANY WPIS</h4>
+                        <h4 className="sidebar-wrapper-title">PROMOTED POST</h4>
                         <Promoted />
-                        <h4 className="sidebar-wrapper-title">PRZESZUKAJ BLOGA</h4>
+                        <h4 className="sidebar-wrapper-title">SEARCH THE BLOG</h4>
                         <SearchEngine />
                     </div>
                 </div>
@@ -151,7 +137,7 @@ const DocumentDisplay = () => {
         return (
             <section className="article__display">
                 <div className="container">
-                 <p>Ładowanie...</p> 
+                 <p>Loading...</p> 
                 </div>
             </section>
         )

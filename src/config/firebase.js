@@ -3,15 +3,13 @@ import "firebase/firestore";
 import "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDfCLPWMavM0ecWfsvqAI2JMf_694vGqyg",
-    authDomain: "zielonojemy.firebaseapp.com",
-    databaseURL: "https://zielonojemy.firebaseio.com",
-    projectId: "zielonojemy",
-    storageBucket: "zielonojemy.appspot.com",
-    messagingSenderId: "628158372674",
-    appId: "1:628158372674:web:49c9d4970136241a5e46db",
-    measurementId: "G-S1ERNH5PLY"
-  };
+  apiKey: "AIzaSyDFRfSoSrr0IicYzmiShbsYVkjMvj2BAeo",
+  authDomain: "greenblog-8be80.firebaseapp.com",
+  projectId: "greenblog-8be80",
+  storageBucket: "greenblog-8be80.appspot.com",
+  messagingSenderId: "554774819680",
+  appId: "1:554774819680:web:96a63bac9e20e1571da405"
+};
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig); 

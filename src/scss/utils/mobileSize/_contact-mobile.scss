@@ -176,8 +176,8 @@
                 .img-box {
                     width: 100%;
                     min-width: 0;
-                    height: 450px;
-                    background: url(/src/scss/assets/IMG_0203.PNG);
+                    height: 350px;
+                    background: url(/src/scss/assets/contact-girl.png);
                     background-position: 50% bottom;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -192,6 +192,7 @@
         .contact__page {
             .page-box {
                 .img-box {
+                    margin-top: 40px;
                     height: 600px;
                 }
                 .form-box {

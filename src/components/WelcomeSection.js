@@ -1,15 +1,8 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import {
-  HashRouter,
-  Route,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 const WelcomeSection = () => {
-    
     return (
         <section className="welcome-section">
             <div className="container">
@@ -19,9 +12,9 @@ const WelcomeSection = () => {
                         <div className="photo"></div>
                     </div>
                     <div className="txt__box">
-                        <h1>Potrzebujesz pomocy dietetyka?</h1>
+                        <h1>Cupcake ipsum dolor sit amet gummies.</h1>
                         <div className="short-line"></div>
-                        <h2>Poznaj moją ofertę, wybierz dogodną opcję i skontaktuj się ze mną</h2>
+                        <h2>Topping chupa chups bear claw shortbread tiramisu.</h2>
                     </div>
                 </div>
             </div>
@@ -30,7 +23,7 @@ const WelcomeSection = () => {
                     <div className="button-box">
                         <div className="short-line"></div>
                         <Link to="about-blog" smooth="true" duration={500}>
-                            <button>Czytaj więcej</button>
+                            <button>Read more</button>
                         </Link>
                     </div>
                 </div>
