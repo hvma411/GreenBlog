@@ -1,0 +1,249 @@
+@media only screen and (min-width: 1024px) {
+    .articles {
+        width: 100%;
+        height: auto;
+        padding: 120px 0 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .articles__page {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .sidebar {
+                display: block;
+            }
+
+            .articles-list {
+                width: 75%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding-right: 20px;
+
+                .title-pagination-box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    height: auto;
+
+                    .section__title {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        color: $line-color;
+                        padding-left: 2px;
+                    }
+                }
+
+                .underline {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 3px solid $line-color;
+                    margin-bottom: 5px;
+                }
+
+                .articles__pagination {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        width: 100%;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .pagination__list {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 25px;
+                background: $about-color;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $line-color;
+                margin-left: 5px;
+                cursor: pointer;
+
+            }
+
+            li:hover {
+                background: $main-color;
+            }
+        }
+    }
+
+    .article-box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: $about-color;
+        margin: 5px 0 20px 0;
+        cursor: pointer;
+
+        div.img-container {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+
+            .article__photo, .recipe__photo {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                background-image: url(/src/scss/assets/NewOnlineTrainingImage.PNG);
+                background-position: center;
+                background-size: cover;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin: auto;
+            }
+        }
+        
+        .article__data {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: $line-color;
+            padding: 10px 15px;
+
+            .article__title__date {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 3px;
+
+                .title {
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.5px
+                }
+
+                .date {
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+            }
+
+            .article__cut__text {
+                font-size: 1.2rem;
+                font-weight: 400;
+                max-width: 720px;
+                padding-bottom: 10px;
+            }
+
+            .hash__tags {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 0.9rem;
+
+                .tag {
+                    font-weight: 600;
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+
+    .article-box:hover {
+        background: $main-color;
+        transform: translateY(-1px);
+        -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+        box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.5);
+    }
+
+    .sidebar {
+        width: 30%;
+        height: 100%;
+
+        .section__title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $line-color;
+            padding-left: 2px;
+        }
+
+        .underline {
+            display: block;
+            content: "";
+            width: 100%;
+            border-bottom: 3px solid $line-color;
+            margin-bottom: 10px;
+        }
+        
+
+        .instagram-feed {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .section__title {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $line-color;
+                padding-left: 2px;
+            }
+
+            .underline {
+                content: "";
+                width: 100%;
+                border-bottom: 3px solid $line-color;
+                margin-bottom: 10px;
+            }
+
+            .ig-box {
+                margin-top: 0;
+                background: $about-color;
+                padding: 20px;
+                padding-bottom: 0;
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            img:hover {
+                transform: translateY(-1px);
+                -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+                box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.5);
+            }
+        }
+    }
+}

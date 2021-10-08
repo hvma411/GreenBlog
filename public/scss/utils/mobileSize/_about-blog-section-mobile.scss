@@ -1,0 +1,433 @@
+@media only screen and (min-width: 300px) {
+    .about-blog-section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+    
+        .text-part-box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            h2 {
+                font-size: 1.5rem;
+                color: $btn-color;
+                font-weight: 500;
+                text-align: center;
+                max-width: 850px;
+                padding: 10px;
+            }
+    
+            .under-line {
+                width: 150px;
+                border-bottom: 3px solid $line-color;
+                margin: 10px 0 10px 0;
+            }
+    
+            h3 {
+                font-size: 1.1rem;
+                color: $line-color;
+                font-weight: 300;
+                text-align: center;
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    
+        .new-posts-box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+    
+    
+            .new-article-title-box {
+                writing-mode: horizontal-tb;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+    
+                .title {
+                    font-size: 18px;
+                    color: $line-color;
+                    height: auto;
+                    text-align: center;
+                    padding-bottom: 15px;
+                }
+            }
+    
+            .new-recipe-title-box {
+                writing-mode: horizontal-tb;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                .title {
+                    font-size: 18px;
+                    color: $line-color;
+                    height: auto;
+                    padding-top: 15px;
+                }
+            }
+    
+            .short-line-left {
+                height: 30px;
+                border-left: 3px solid $line-color;
+                position: static;
+            }
+    
+            .short-line-right {
+                height: 30px;
+                border-left: 3px solid $line-color;
+                position: static;
+            }
+    
+    
+            .articles-recipes {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+
+                .img-top {
+                    object-position: top;
+                }
+        
+                .img-center {
+                    object-position: center;
+                }
+        
+                .img-bottom {
+                    object-position: bottom;
+                }
+
+
+                .post-image {
+                    position: relative;
+                    max-height: 250px;
+                    overflow: hidden;
+                    text-decoration: none;
+
+                    .post {
+                        animation: movingImageMobile;
+                        animation-duration: 15s;
+                        animation-iteration-count: infinite;
+                    }
+                }
+    
+                .post {
+                    object-fit: cover;
+                    width: 250px;
+                    height: 250px;
+                    background: black;
+                    margin: 10px;
+                    
+                }
+
+                .post-data {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(79, 134, 132, 0.75);
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    padding: 10px;
+                    color: white;
+
+                    h3 {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                    }
+
+                    .content {
+                        padding: 5px;
+                        padding-top: 5px;
+                        font-size: 0.85rem;
+                        font-weight: 400;
+
+                        p:last-of-type::after{
+                            content: "..."
+                        }
+                    }
+
+                    a {
+                        font-size: 1rem;
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    span {
+                        font-weight: 600;
+                        border: 1px solid white;
+                        padding: 2px 15px;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                    a:hover, span:hover {
+                        background: white;
+                        color: $line-color;
+                    }
+              
+                }
+    
+                .logo {
+                    width: 100px;
+                    height: 100px;
+                    background-image: url(/src/scss/assets/logo2.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin: 15px;
+                }
+
+                .post-image:hover {
+                    transform: translateY(-1px);
+                    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+                    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.5);
+
+                    a {
+                        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                        transform: translate3d(0, 0, 0);
+                        backface-visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .about-blog-section {
+
+        .text-part-box {
+
+            h2 {
+                font-size: 1.9rem;
+                color: $btn-color;
+                font-weight: 500;
+                text-align: center;
+                max-width: 850px;
+                padding: 10px;
+            }
+    
+            .under-line {
+                width: 150px;
+                border-bottom: 3px solid $line-color;
+                margin: 10px 0 10px 0;
+            }
+    
+            h3 {
+                font-size: 1.3rem;
+                color: $line-color;
+                font-weight: 300;
+                text-align: center;
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    
+        .new-posts-box {
+
+            .articles-recipes {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+
+                .post-image {
+                    position: relative;
+                    max-height: 250px;
+                }
+    
+                .post {
+                    width: 250px;
+                    height: 250px;
+                    background: black;
+                    margin: 10px;
+                }
+    
+                .logo {
+                    width: 100px;
+                    height: 100px;
+                    background-image: url(/src/scss/assets/logo2.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 760px) and (orientation: landscape) {
+
+} 
+
+@media only screen and (min-width: 760px) and (orientation: portrait) {
+    .about-blog-section {
+
+        .text-part-box {
+
+            h2 {
+                font-size: 3rem;
+                color: $btn-color;
+                font-weight: 500;
+                text-align: center;
+                max-width: 850px;
+                padding: 10px;
+            }
+    
+            .under-line {
+                width: 150px;
+                border-bottom: 3px solid $line-color;
+                margin: 10px 0 10px 0;
+            }
+    
+            h3 {
+                font-size: 1.7rem;
+                color: $line-color;
+                font-weight: 300;
+                text-align: center;
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    
+        .new-posts-box {
+
+            .new-article-title-box {
+                writing-mode: horizontal-tb;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+    
+                .title {
+                    font-size: 1.5rem;
+                    color: $line-color;
+                    height: auto;
+                    text-align: center;
+                    padding-bottom: 15px;
+                }
+            }
+    
+            .new-recipe-title-box {
+                writing-mode: horizontal-tb;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                .title {
+                    font-size: 1.5rem;
+                    color: $line-color;
+                    height: auto;
+                    padding-top: 15px;
+                }
+            }
+
+            .articles-recipes {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+
+                .post-image {
+                    position: relative;
+                    max-height: 420px;
+                }
+    
+                .post {
+                    width: 400px;
+                    height: 400px;
+                    background: black;
+                    margin: 10px;
+                }
+
+                .post-data {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(79, 134, 132, 0.75);
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    padding: 20px;
+                    padding-top: 20px;
+                    color: white;
+
+                    h3 {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                    }
+
+                    .content {
+                        padding: 10px;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                    }
+
+                    a {
+                        font-size: 1.4rem;
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    span {
+                        font-weight: 600;
+                        border: 1px solid white;
+                        padding: 2px 15px;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                    a:hover, span:hover {
+                        background: white;
+                        color: $line-color;
+                    }
+              
+                }
+    
+                .logo {
+                    width: 150px;
+                    height: 150px;
+                    background-image: url(/src/scss/assets/logo2.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin: 15px;
+                }
+            }
+        }
+    }
+}

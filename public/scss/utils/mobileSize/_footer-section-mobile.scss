@@ -1,0 +1,92 @@
+@media only screen and (min-width: 300px) {
+    footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: $main-color;
+    
+        .footer-wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0 15px 0;
+    
+            .footer-part {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                ul {
+                    list-style: none;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+    
+                    li {
+                        padding: 5px;
+                        color: $line-color;
+                        font-weight: 600;
+                        
+                        a {
+                            text-decoration: none;
+                            color: $line-color;
+                        }
+                    }
+                }
+    
+                .logo {
+                    width: 190px;
+                    height: 160px;
+                    background: url(/src/scss/assets/logo.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .contact-info-box {
+                display: none;
+            }
+
+            .vertical-line {
+                height: 200px;
+                border-left: 3px solid $line-color;
+                display: none;
+            }
+    
+            .logo-box {
+                flex-direction: column;
+                color: $btn-color;
+    
+                svg {
+                    font-size: 2rem;
+                    margin: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: $btn-color;
+                    text-decoration: none;
+                }
+            }
+    
+            .footer-nav {
+                text-align: center;
+                display: none;
+                
+                ul {
+                    li {
+                        a {
+                            color: $line-color;
+                            text-decoration: none;
+                        }
+                    }
+
+                    
+                }
+            }
+    
+            
+        }
+    }
+}
