@@ -46,34 +46,34 @@ const Contact = () => {
             document.querySelector(".wrongMessage").style.display = "none";
         };
 
-        if (errors.length < 1) {
+        // if (errors.length < 1) {
 
-            emailjs.send("service_4fwm234", "template_bx41vgk", {
-                from_name: contactForm.fullName,
-                message: contactForm.guestMessage,
-                guest_email: contactForm.emailAddress,
-                guest_name: contactForm.fullName,
-                reply_to: contactForm.emailAddress,
-            })
-            .then(response => {
-                document.querySelector(".messageInfo").style.display = "block";
+        //     emailjs.send("service_4fwm234", "template_bx41vgk", {
+        //         from_name: contactForm.fullName,
+        //         message: contactForm.guestMessage,
+        //         guest_email: contactForm.emailAddress,
+        //         guest_name: contactForm.fullName,
+        //         reply_to: contactForm.emailAddress,
+        //     })
+        //     .then(response => {
+        //         document.querySelector(".messageInfo").style.display = "block";
 
-                const classClear = setTimeout(() => {
-                    document.querySelector(".messageInfo").style.display = "none";
-                }, 1500);
+        //         const classClear = setTimeout(() => {
+        //             document.querySelector(".messageInfo").style.display = "none";
+        //         }, 1500);
 
-                setContactForm({
-                    fullName: "",
-                    emailAddress: "",
-                    guestMessage: "",
-                })
+        //         setContactForm({
+        //             fullName: "",
+        //             emailAddress: "",
+        //             guestMessage: "",
+        //         })
                 
-                console.log("Success", response.status, response.text)
+        //         console.log("Success", response.status, response.text)
 
-            }, error => {
-                console.log(error.text)
-            })
-        };
+        //     }, error => {
+        //         console.log(error.text)
+        //     })
+        // };
     };
     
     const handleFormChange = (e) => {
@@ -149,9 +149,7 @@ const Contact = () => {
                                 </div>
                                 <button onClick={ handleButtonClick }>Send</button>
                             </div>
-
                         </form>
-
                     </div>
                     <div className="img-box"></div>
                 </div>
