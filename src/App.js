@@ -33,13 +33,13 @@ const App = () => {
                     <HeaderSection />
                         <Switch>
                             <Route exact path="/">
-                                <Main setIsModalVisible={ setIsModalVisible } />
+                                <Main />
                             </Route>
                             <Route exact path="/articles">
-                                <Articles setIsModalVisible={ setIsModalVisible } />
+                                <Articles />
                             </Route>
                             <Route exact path="/recipes">
-                                <Recipes setIsModalVisible={ setIsModalVisible } />
+                                <Recipes />
                             </Route>
                             <Route path="/services">
                                 <Services/>
@@ -54,7 +54,7 @@ const App = () => {
                             <Route exact path="/recipes/:typeOf/:documentID" component={withRouter(DocumentDisplay)} />
                         </Switch>
                     <FooterSection />
-                    { isModalVisible ? <SearchResultModal setIsModalVisible={ setIsModalVisible } /> : null }
+                    { isModalVisible ? <SearchResultModal /> : null }
                 </SearchEngineContext.Provider>
             </ScrollToTop>
         </Router>

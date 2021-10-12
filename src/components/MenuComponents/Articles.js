@@ -12,6 +12,7 @@ import firebase from '../../config/firebase';
 import Promoted from "./Promoted";
 import parse from 'html-react-parser';
 import SearchEngine from "../SearchEngine";
+import LoadingScreen from "./LoadingScreen";
 
 const Articles = () => {
 
@@ -38,8 +39,14 @@ const Articles = () => {
             console.error("Error while getting documents: ", error);
         });
         setArticles(articlesArr);
-        setLoading(false);
+        turnLoadingSpinnerOff();
     };
+
+    const turnLoadingSpinnerOff = () => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000)
+    }
 
     useEffect(() => {
         getAllArticles()
@@ -92,6 +99,7 @@ const Articles = () => {
                         <SearchEngine />
                     </div>
                 </div>
+                { loading ? <LoadingScreen /> : "" }
             </section>
         </>
     );

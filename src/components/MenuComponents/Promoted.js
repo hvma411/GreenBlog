@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import firebase from '../../config/firebase';
 import parse from 'html-react-parser';
 
 const Promoted = () => {
+
+    const { documentID } = useParams();
 
     const db = firebase.firestore();
 
@@ -81,7 +83,7 @@ const Promoted = () => {
             { loadingData ? <div className="loading-content"></div> : 
                 <div className="promoted-post-box">
                     <div className="img-container">
-                        <div className="photo" style={{ background: `url(${allData[randomPostIndex].featureImage})`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+                        <div className="photo" style={{ background: `url(${allData[randomPostIndex].featureImage})` }}></div>
                     </div>
                     <div className="data">
                         <h4 className="data__title">{ allData[randomPostIndex].title }</h4>

@@ -16,6 +16,7 @@ import firebase from '../../config/firebase';
 import parse from 'html-react-parser';
 import Promoted from "./Promoted";
 import SearchEngine from "../SearchEngine";
+import LoadingScreen from "./LoadingScreen";
 
 const Recipes = () => {
 
@@ -42,8 +43,14 @@ const Recipes = () => {
             console.error("Error while getting documents: ", error);
         });
         setRecipes(recipesArr);
-        setLoading(false);
+        turnLoadingSpinnerOff();
     };
+
+    const turnLoadingSpinnerOff = () => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000)
+    }
 
     useEffect(() => {
         getAllRecipes()
@@ -97,6 +104,7 @@ const Recipes = () => {
                         <SearchEngine />
                     </div>
                 </div>
+                { loading ? <LoadingScreen /> : "" }
             </section>
         </>
     );

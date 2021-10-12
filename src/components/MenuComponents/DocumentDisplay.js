@@ -21,6 +21,7 @@ import {
 } from 'react-share'
 import Promoted from "./Promoted";
 import SearchEngine from "../SearchEngine";
+import LoadingScreen from "./LoadingScreen";
 
 library.add(
     faHeart,
@@ -90,8 +91,14 @@ const DocumentDisplay = () => {
                 console.log("Error getting document:", error);
             });
             setDocument(documentToSet);
-            setLoading(false);
+            turnLoadingSpinnerOff();
         }
+    }
+
+    const turnLoadingSpinnerOff = () => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000)
     }
 
     useEffect(() => {
@@ -136,9 +143,7 @@ const DocumentDisplay = () => {
     } else {
         return (
             <section className="article__display">
-                <div className="container">
-                 <p>Loading...</p> 
-                </div>
+                <LoadingScreen />
             </section>
         )
     }
