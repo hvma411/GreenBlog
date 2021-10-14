@@ -39,6 +39,17 @@ const HeaderSection = () => {
 
     const openSearchBox = () => {
         searchContext.setIsModalVisible(true)
+        handleHamburgerClick();
+    }
+
+    const handleHamburgerClick = () => {
+        const hamburger = document.querySelector('.hamburger');
+        const hamburgerNav = document.querySelector('.hamburger-nav');
+        const body = document.querySelector('body');
+        
+        hamburger.classList.toggle('hamburger--active');
+        hamburgerNav.classList.toggle('hamburger-nav--active');
+        body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
     }
     
     return (
@@ -58,7 +69,7 @@ const HeaderSection = () => {
             <div className="reducer-line"></div>
             <nav className="main-nav container">
                 <Link to="/" className="mobile-logo"/>
-                <HamburgerMenu />
+                <HamburgerMenu handleHamburgerClick={ handleHamburgerClick } />
                 <ul>
                     <li><Link to="/">HOME</Link></li>
                     <li><Link to="/articles">ARTICLES</Link></li>
@@ -74,17 +85,7 @@ const HeaderSection = () => {
     );
 };
 
-const HamburgerMenu = () => {
-    const handleHamburgerClick = () => {
-        const hamburger = document.querySelector('.hamburger');
-        const hamburgerNav = document.querySelector('.hamburger-nav');
-        const body = document.querySelector('body');
-        
-        hamburger.classList.toggle('hamburger--active');
-        hamburgerNav.classList.toggle('hamburger-nav--active');
-        body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
-    }
-
+const HamburgerMenu = ({ handleHamburgerClick }) => {
     return (
         <button className="hamburger" onClick={ handleHamburgerClick }>
             <span className="hamburger__box">

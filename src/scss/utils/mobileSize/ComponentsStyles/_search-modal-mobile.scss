@@ -1,0 +1,188 @@
+@media screen and (min-width: 200px) {
+    .search-result-background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(83, 109, 108, 0.7);
+        z-index: 100;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .close-btn {
+            font-size: 2rem;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+        }
+    
+        .search-result-modal {
+            position: relative;
+            background: white;
+            width: 90%;
+            height: auto;
+    
+    
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+              }
+              
+              @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+    
+              
+            .loading-logo {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                top: 25%;
+                left: 0;
+                right: 0;
+                background-size: cover;
+                background-image: url(/src/scss/assets/logo.png);
+            }
+    
+            .loading-spinner {
+                display: block;
+                position: absolute;
+                width: 225px;
+                height: 225px;
+                margin-left: auto;
+                margin-right: auto;
+                top: 23%;
+                left: 0;
+                right: 0;
+                border: 10px solid transparent;
+                border-radius: 50%;
+                border-top: 10px solid $line-color;
+                -webkit-animation: spin 1s linear infinite; /* Safari */
+                animation: spin 1s linear infinite;
+            }
+    
+            
+    
+            ::-webkit-scrollbar {
+                background: $about-color;
+                width: 18px;
+            }
+    
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 10px 10px transparent;
+                border: solid 5px transparent;
+            }
+    
+            ::-webkit-scrollbar-thumb {
+                border-radius: 20px;
+                box-shadow: inset 0 0 10px 10px $line-color;
+                border: solid 5px transparent;
+            }
+    
+            .list-box {
+                width: 100%;
+                height: 100%;
+                min-height: 500px;
+                max-height: 500px;
+                background: $about-color;
+                padding: 20px;
+                padding-bottom: 0;
+                overflow-y: scroll;
+                overflow-x: hidden;
+    
+                .result-list {
+                    width: 100%;
+                    height: auto;
+                    background: white;
+                }
+            }
+    
+            .space-wrapper {
+                padding-top: 20px;
+                background: $about-color;
+            }
+        }
+    
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .single-search-result {
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 5px;
+        background: $about-color;
+        border-bottom: 1px solid $line-color;
+    
+        .result-img {
+            max-width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    
+        .result-details {
+            width: 100%;
+            height: auto;
+            padding: 5px 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: $line-color;
+            white-space: nowrap;
+            word-wrap: break-word;
+    
+            .title-row {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                h3 {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+    
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 100;
+                }
+            }
+    
+            .content-row {
+                font-size: 1.15rem;
+                font-weight: 400;
+            }
+    
+            .tags-row {
+                height: auto;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                list-style: none;
+    
+                li {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {   
+    .single-search-result {   
+        .result-details {
+            white-space: unset;
+            word-wrap: normal;
+        }
+    }
+}
